@@ -17,7 +17,7 @@
         float: right;
     }
     .card{
-        /* display: hides; */
+        display: none;
     }
   </style>
   <script src="js/script.js"></script>
@@ -26,11 +26,11 @@
       <div class="d-flex flex-column align-items-center">
         <div class="header w-100 d-flex flex-column align-items-center">
           <h1 class="p-2">Interactive Quiz App</h1>
-          <button class="btn btn-primary start">Start Quiz</button>
+          <button class="btn btn-primary start" onclick="start()">Start Quiz</button>
         </div>
 
-        <div class="card w-75 mt-4">
-          <div class="card-body">
+        <div class="card w-75 mt-4" id="card">
+          <div class="card-body" >
               <fieldset class="d-flex flex-column m-2">
                 <legend class="question">Question</legend>
                 <div>
