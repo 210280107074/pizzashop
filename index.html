@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Interactive Quiz App</title>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/js/bootstrap.min.js" />
-  </head>
-  <style>
-    body {
-      margin: 0;
-      padding: 10px;
-    }
-    .next{
-        /* margin-left: 0px auto; */
-        float: right;
-    }
-    .card{
-        display: none;
-    }
-  </style>
-  <script src="js/script.js"></script>
-  <body>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+        .next {
+            float: right;
+        }
+        .card {
+            display: none;
+        }
+        .result {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        label {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
     <div class="container-fluid p-5">
-      <div class="d-flex flex-column align-items-center">
-        <div class="header w-100 d-flex flex-column align-items-center">
-          <h1 class="p-2">Interactive Quiz App</h1>
-          <button class="btn btn-primary start" onclick="start()">Start Quiz</button>
-        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="header w-100 d-flex flex-column align-items-center">
+                <h1 class="p-2">Interactive Quiz App</h1>
+                <button class="btn btn-primary start" id="start" onclick="start()">Start Quiz</button>
+            </div>
 
-        <div class="card w-75 mt-4" id="card">
-          <div class="card-body" >
-              <fieldset class="d-flex flex-column m-2">
-                <legend class="question">Question</legend>
-                <div>
-                    <input type="radio" class="radio-btn" id="r1" name="radio" id="xs">
-                    <label for="xs" class="opt-1"></label>
+            <div class="card w-75 mt-4" id="card">
+                <div class="card-body">
+                    <fieldset class="d-flex flex-column m-2">
+                        <legend class="question">Question</legend>
+                        <div>
+                            <input type="radio" class="radio-btn" id="r1" name="radio" value="A">
+                            <label for="r1" class="opt-1">A</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radio-btn" id="r2" name="radio" value="B">
+                            <label for="r2" class="opt-2">B</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radio-btn" id="r3" name="radio" value="C">
+                            <label for="r3" class="opt-3">C</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="radio-btn" id="r4" name="radio" value="D">
+                            <label for="r4" class="opt-4">D</label>
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-primary next mb-3" id="next">Next</button>
                 </div>
-                <div>
-                    <input type="radio" class="radio-btn" id="r2" name="radio" id="s">
-                    <label for="s" class="opt-2"></label>
-                </div>
-                <div>
-                    <input type="radio" class="radio-btn" id="r3" name="radio" id="m">
-                    <label for="m" class="opt-3"></label>
-                </div>
-                <div>
-                    <input type="radio" class="radio-btn" id="r4" name="radio" id="l">
-                    <label for="l" class="opt-4"></label>
-                </div>
-              </fieldset>
-              <button class="btn btn-primary next"  id="next">Next</button>
-          </div>
-        </div>
+            </div>
 
-        <div class="mt-3">
-            <span class="result">
-            </span>
+            <div class="m-3">
+                <span class="result"></span>
+            </div>
         </div>
-
-      </div>
     </div>
-  </body>
+</body>
 </html>
